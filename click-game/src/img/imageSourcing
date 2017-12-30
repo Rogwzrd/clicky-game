@@ -1,0 +1,32 @@
+import React from 'react';
+import balrog from './balrog.gif';
+import blanka from './blanka.gif';
+import chunLi from './chunli.gif';
+import dhalsim from './dhalsim.gif';
+import ken from './ken.gif';
+import ryu from './ryu.gif';
+import ehonda from './ehonda.gif';
+import sagat from './sagat.gif';
+import vega from './vega.gif';
+import zangief from './zangief.gif';
+import guile from './guile.gif';
+import mbison from './mbison.gif';
+
+
+const images = {
+    balrog: balrog,
+    blanka: blanka,
+    chunLi: chunLi,
+    dhalsim: dhalsim,
+    ken: ken,
+    ryu: ryu,
+    ehonda: ehonda,
+    sagat: sagat,
+    vega: vega,
+    zangief: zangief,
+    guile: guile,
+    mbison: mbison
+
+};
+
+export default images;
