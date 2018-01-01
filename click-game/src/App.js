@@ -81,30 +81,25 @@ class App extends Component {
         ]
     };
 
-// counterCheck=(name,selectedState)=>{
-//     this.setState({selected: true});
-//     console.log(`my key is `, this.state.key, `\nmy name is `, this.state.name, `\nand my selected state is `, this.state.selected);
-//     if (name === false){
-//         this.setState({counter: this.state.counter + 1});
-//     } else{
-//         console.log(`you have already chosen this character`)
-//     }
-// };
+
 
     counterCheck=(name,selectedState)=>{
-        const fightersArray = this.state.fighters;
+        let fightersArray = this.state.fighters;
+        fightersArray.sort(function(a, b){return 0.5 - Math.random()});
 
-        fightersArray.forEach((fighter)=>{
-            if (fighter.name === name && fighter.selected === false){
-                fighter.selected=true;
-                this.setState({ fighters: fightersArray, counter: this.state.counter + 1 })
-            } else if (fighter.name === name && fighter.selected === true){
-                fighter.selected= false;
-                this.setState({ fighters: fightersArray, counter: 0, })
-
-
-            }
-        });
+        if (selectedState){
+            fightersArray.forEach(fighter=> fighter.selected = false);
+            this.setState({fighters: fightersArray, counter: 0,})
+        } else {
+            fightersArray.forEach((fighter) => {
+                if (fighter.name === name && fighter.selected === false) {
+                    fighter.selected = true;
+                    this.setState({fighters: fightersArray, counter: this.state.counter + 1})
+                } else if (fighter.name === name && fighter.selected === true) {
+                    fighter.selected = false;
+                }
+            });
+        }
     };
 
     render(){
