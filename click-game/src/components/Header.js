@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Header = ()=> (
-    <nav className={"navbar navbar-default navbar-fixed-top"}>
+const Header = (props)=> (
+    <nav style={{background: "blue", color: "gold"}} className={"navbar navbar-default navbar-fixed-top"}>
         <div className={"conatiner"}>
-            Super Street Clicker II Turbo Alpha Extend
+            <div>Super Street Clicker II Turbo Alpha Extend</div>
+            <div>score:{props.score}</div>
         </div>
     </nav>
 );
