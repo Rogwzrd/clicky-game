@@ -15,7 +15,7 @@ componentDidMount(){
 
     render(){
         return(
-            <div onClick={()=>this.props.counterCheck(this.props.character,this.props.selected)} className={"col-3 mb-3"}>
+            <div onClick={()=>this.props.counterCheck(this.props.character,this.props.selected)} className={"col-3 mt-3"}>
                 <Image imgSrc={this.props.character} />
             </div>
         )

@@ -81,8 +81,6 @@ class App extends Component {
         ]
     };
 
-
-
     counterCheck=(name,selectedState)=>{
         let fightersArray = this.state.fighters;
         fightersArray.sort(function(a, b){return 0.5 - Math.random()});
@@ -95,8 +93,8 @@ class App extends Component {
                 if (fighter.name === name && fighter.selected === false) {
                     fighter.selected = true;
                     this.setState({fighters: fightersArray, counter: this.state.counter + 1})
-                } else if (fighter.name === name && fighter.selected === true) {
-                    fighter.selected = false;
+                // } else if (fighter.name === name && fighter.selected === true) {
+                //     fighter.selected = false;
                 }
             });
         }
