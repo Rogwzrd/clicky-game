@@ -9,9 +9,9 @@ class CharacterCard extends React.Component {
             selected: this.props.selected
         };
     }
-componentDidMount(){
-    console.log(this.props.id, this.props.character, this.props.selected, this.props.counterCheck);
-}
+    componentDidMount(){
+        console.log(this.props.id, this.props.character, this.props.selected, this.props.counterCheck);
+    }
 
     render(){
         return(

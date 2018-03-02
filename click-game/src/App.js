@@ -19,7 +19,6 @@ class App extends Component {
                 name: "blanka",
                 selected: false
             }
-
             ,
             {
                 key: 3,
@@ -87,14 +86,12 @@ class App extends Component {
 
         if (selectedState){
             fightersArray.forEach(fighter=> fighter.selected = false);
-            this.setState({fighters: fightersArray, counter: 0,})
+            this.setState({fighters: fightersArray, counter: 0})
         } else {
             fightersArray.forEach((fighter) => {
                 if (fighter.name === name && fighter.selected === false) {
                     fighter.selected = true;
                     this.setState({fighters: fightersArray, counter: this.state.counter + 1})
-                // } else if (fighter.name === name && fighter.selected === true) {
-                //     fighter.selected = false;
                 }
             });
         }
